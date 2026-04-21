@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { LoadingProvider } from "../lib/loadingContext";
 import Script from "next/script";
+import LenisProvider from "@/components/LenisProvider";
+
 
 export const metadata = {
   metadataBase: new URL("https://nodecraftagency.vercel.app"),
@@ -69,7 +71,9 @@ export default function RootLayout({
         className="antialiased bg-[#050508] text-slate-200 overflow-x-hidden"
         cz-shortcut-listen="false"
       >
-        <LoadingProvider>{children}</LoadingProvider>
+        <LenisProvider>
+          <LoadingProvider>{children}</LoadingProvider>
+        </LenisProvider>
         <Script
           id="schema"
           type="application/ld+json"

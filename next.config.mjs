@@ -6,5 +6,6 @@ const nextConfig = {
         images: {   
         domains: ['i.pinimg.com'],
     },
+    reactStrictMode: false
 };
 export default nextConfig;
