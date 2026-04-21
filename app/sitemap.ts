@@ -1,15 +1,15 @@
 export default function sitemap() {
   return [
     {
-      url: "https://nodecraftagency.com",
+      url: "https://nodecraftagency.vercel.app/",
       lastModified: new Date(),
     },
     {
-      url: "https://nodecraftagency.com/about",
+      url: "https://nodecraftagency.vercel.app/about",
       lastModified: new Date(),
     },
     {
-      url: "https://nodecraftagency.com/blog",
+      url: "https://nodecraftagency.vercel.app/blog",
       lastModified: new Date(),
     },
   ];
