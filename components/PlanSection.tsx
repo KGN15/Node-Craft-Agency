@@ -97,14 +97,16 @@ export default function PlanSection() {
         ════════════════════════════════════ */}
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5 mb-24">
           {plans.map((plan, i) => {
-            const hasDiscount = plan.discount && plan.discount > 0;
+            const discount = plan.discount ?? 0;
+
+            const hasDiscount = discount > 0;
 
             const finalPriceBDT = hasDiscount
-              ? Math.round(plan.priceBDT * (1 - plan.discount / 100))
+              ? Math.round(plan.priceBDT * (1 - discount / 100))
               : plan.priceBDT;
 
             const finalPriceUSD = hasDiscount
-              ? Math.round(plan.priceUSD * (1 - plan.discount / 100))
+              ? Math.round(plan.priceUSD * (1 - discount / 100))
               : plan.priceUSD;
 
             return (
@@ -132,7 +134,7 @@ export default function PlanSection() {
                     }}
                   />
                 )}
-                {plan.discount > 0 && (
+                {(plan.discount ?? 0) > 0 && (
                   <div className="absolute top-1 left-[-50px] rotate-[-45deg] bg-red-800 text-white text-[20px] font-bold px-10 py-1 shadow-lg">
                     {plan.discount}% OFF
                   </div>

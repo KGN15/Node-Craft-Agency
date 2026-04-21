@@ -1,11 +1,41 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import { LoadingProvider } from '../lib/loadingContext'
-export const metadata: Metadata = {
-  title: 'NodeCraft Agency — We Build Systems That Help Businesses Grow',
-  description: 'Premium web development agency specializing in Next.js, TypeScript, and full-stack solutions for modern businesses.',
-  keywords: ['web development', 'Next.js', 'Bangladesh', 'NodeCraft', 'agency'],
-}
+export const metadata = {
+  metadataBase: new URL("https://nodecraftagency.com"),
+  title: {
+    default: "NodeCraft Agency | Modern Web Design in Bangladesh",
+    template: "%s | NodeCraft Agency",
+  },
+  description:
+    "NodeCraft Agency is a premium web development agency in Bangladesh. We build aesthetic, fast, and SEO-optimized websites using modern technologies like Next.js.",
+  keywords: [
+    "web design Bangladesh",
+    "Next.js developer Bangladesh",
+    "modern website agency",
+    "NodeCraft Agency",
+    "SEO web development",
+  ],
+  authors: [{ name: "NodeCraft Agency" }],
+  openGraph: {
+    title: "NodeCraft Agency",
+    description:
+      "We build aesthetic, fast, SEO optimized websites for businesses.",
+    url: "https://nodecraftagency.com",
+    siteName: "NodeCraft Agency",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "NodeCraft Agency",
+    description:
+      "Premium web design & development agency in Bangladesh.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function RootLayout({
   children,
