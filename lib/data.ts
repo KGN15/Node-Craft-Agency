@@ -111,7 +111,7 @@ export const products: Product[] = [
     "Vercel",
     "Netlify",
   ],
-  image: "/lumina-books.png",
+  image: "https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/project_item/attachment/3c63f42324ffd010b40ec72ab3df226e-1777457263953/BookShop%20Manager%20-%20Brave%204_29_2026%204_06_01%20PM.png",
   color: "from-amber-600 to-orange-500",
   features: [
     "Offline-first Desktop System",
